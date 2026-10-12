@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b3350"/>
+      <stop offset="1" stop-color="#05142a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.12" r="0.7">
+      <stop offset="0" stop-color="#19e068" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#19e068" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2be37a"/>
+      <stop offset="1" stop-color="#09a841"/>
+    </linearGradient>
+    <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d9efe3"/>
+    </linearGradient>
+    <clipPath id="r"><rect width="512" height="512" rx="116"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="512" height="512" fill="url(#bg)"/>
+    <rect width="512" height="512" fill="url(#glow)"/>
+    <circle cx="256" cy="256" r="214" fill="none" stroke="#19e068" stroke-opacity="0.16" stroke-width="3"/>
+
+    <!-- horns -->
+    <path d="M190 170C138 166 104 126 112 82" fill="none" stroke="url(#green)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M322 170C374 166 408 126 400 82" fill="none" stroke="url(#green)" stroke-width="22" stroke-linecap="round"/>
+    <!-- ears -->
+    <ellipse cx="128" cy="214" rx="52" ry="26" transform="rotate(-24 128 214)" fill="url(#face)"/>
+    <ellipse cx="384" cy="214" rx="52" ry="26" transform="rotate(24 384 214)" fill="url(#face)"/>
+    <ellipse cx="132" cy="214" rx="30" ry="13" transform="rotate(-24 132 214)" fill="#19e068" fill-opacity="0.55"/>
+    <ellipse cx="380" cy="214" rx="30" ry="13" transform="rotate(24 380 214)" fill="#19e068" fill-opacity="0.55"/>
+    <!-- ear tag -->
+    <rect x="392" y="236" width="26" height="34" rx="7" transform="rotate(12 405 253)" fill="#f5c542"/>
+    <circle cx="406" cy="246" r="3.4" fill="#05142a" fill-opacity="0.55"/>
+
+    <!-- head -->
+    <path d="M178 164Q256 132 334 164L352 262Q354 332 324 374Q300 402 256 402Q212 402 188 374Q158 332 160 262Z" fill="url(#face)"/>
+    <!-- forehead mark -->
+    <path d="M256 172c-18 0-30 14-30 30 0 12 8 20 18 24 6 2 6 2 12 2s6 0 12-2c10-4 18-12 18-24 0-16-12-30-30-30z" fill="#19e068" fill-opacity="0.18"/>
+    <!-- eyes -->
+    <circle cx="212" cy="252" r="14" fill="#05142a"/>
+    <circle cx="300" cy="252" r="14" fill="#05142a"/>
+    <circle cx="216" cy="247" r="4.5" fill="#fff"/>
+    <circle cx="304" cy="247" r="4.5" fill="#fff"/>
+    <!-- muzzle -->
+    <ellipse cx="256" cy="346" rx="82" ry="54" fill="url(#green)"/>
+    <ellipse cx="228" cy="348" rx="10" ry="15" fill="#05142a" fill-opacity="0.85"/>
+    <ellipse cx="284" cy="348" rx="10" ry="15" fill="#05142a" fill-opacity="0.85"/>
+
+    </g>
+</svg>

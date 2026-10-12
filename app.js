@@ -5,8 +5,8 @@ const newId=()=>crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Ma
 const todayISO=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
 const DAYS={en:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],so:['Axad','Isniin','Talaado','Arbaco','Khamiis','Jimce','Sabti']};
 function dayName(iso,short,lang){const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(iso||'');if(!m)return'';const d=new Date(+m[1],+m[2]-1,+m[3]);if(isNaN(d))return'';const n=(DAYS[lang||state.lang]||DAYS.en)[d.getDay()];return short?n.slice(0,3):n}
-const ICON_EDIT='<svg class="i" viewBox="0 0 24 24"><path d="M4 20l1.2-4.2L16.5 4.5a2.1 2.1 0 0 1 3 3L8.2 18.8z"/><path d="M14.5 6.5l3 3"/></svg>';
-const ICON_DEL='<svg class="i" viewBox="0 0 24 24"><path d="M5 7h14M10 7V4.5h4V7M7 7l.8 12.5h8.4L17 7M10.5 11v5M13.5 11v5"/></svg>';
+const ICON_EDIT='<i class="ph-bold ph-pencil-simple"></i>';
+const ICON_DEL='<i class="ph-bold ph-trash"></i>';
 function actionBtns(kind,id){return `<span class="row-actions"><button type="button" class="icon-sm" data-act="edit" data-kind="${kind}" data-id="${esc(id)}" aria-label="Edit">${ICON_EDIT}</button><button type="button" class="icon-sm del" data-act="delete" data-kind="${kind}" data-id="${esc(id)}" aria-label="Delete">${ICON_DEL}</button></span>`}
 function dateCell(d){return d?`${esc(d)} <small class="day">${esc(dayName(d))}</small>`:'—'}
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

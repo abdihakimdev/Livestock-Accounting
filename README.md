@@ -43,3 +43,15 @@ The prototype currently uses localStorage. Supabase integration is the next prod
 - PIN (Settings > Security): required for every delete and every import (created on first use; 4-8 digits, stored as a salted PBKDF2 hash, 5 wrong tries lock for 60 s). This is a guard inside this browser, not server-side security.
 - "Your name" (Settings > Security) is saved on each record as "By" and can be used as a PDF filter.
 - Fix: the X button in the Add Animal dialog used to submit the form and save animals.
+
+## v2.6 — Smarty System look
+- New palette matching Smarty System: deep navy + Smarty green, blue/orange/purple accents, light and dark themes.
+- Plus Jakarta Sans typography; rounded cards, soft shadows, gradient buttons, sticky blurred top bar.
+- Modern icons (Phosphor) replace the inline SVGs: tab bar, buttons, export tools, edit/delete rows, dialogs.
+- Dashboard: navy hero with chart art, color-coded stat cards (Current Capital highlighted), colored bar chart.
+- Floating bottom tab bar restyled (navy pill, green active state).
+- Tables, status pills, dialogs, PIN and toast restyled. Structure, IDs and logic unchanged.
+
+## App icon
+- New icon: cattle head + growth badge on navy/green (icon.svg, favicon.svg/.ico, apple-touch-icon.png, icon-192/512.png, icon-maskable-512.png).
+- Linked in index.html (favicon, Apple touch icon, manifest.webmanifest) and used as the top-bar logo.
